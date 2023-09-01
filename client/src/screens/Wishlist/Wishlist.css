@@ -174,3 +174,23 @@ Section: Products List
       }
     }
   }
+
+  .wishdiv{
+    width: 100%;
+    
+    padding-top: 6rem;
+  }
+
+  .wishdiv ul{
+    display: flex;
+    justify-content: center;
+    
+    column-gap: 2rem;
+  }
+  .headingWish{
+    width: 100%;justify-content: center;
+    padding: 2rem;
+    display: flex;
+    column-gap: 1rem; text-align: center;
+    align-items: center;  
+  }

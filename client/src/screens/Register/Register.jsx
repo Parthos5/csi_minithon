@@ -70,7 +70,7 @@ const Register = () => {
             <div className="LoginFormInnerContainer">
               <header className="Loginheader">Register Now</header>
               <header className="subHeader">
-                Welcome to <b>BarterX!</b> Please Enter your Details
+                Welcome to <b>TechKits!</b> Please Enter your Details
               </header>
               <div>
                 <div className="inputContainer">

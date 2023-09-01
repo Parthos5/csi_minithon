@@ -46,7 +46,7 @@ const Login = () => {
             <div className="LoginFormInnerContainer">
               <header className="Loginheader">Log in</header>
               <header className="subHeader">
-                Welcome to <b>BarterX!</b> Please Enter your Details
+                Welcome to <b>TechKits!</b> Please Enter your Details
               </header>
               <div>
                 <div className="inputContainer">

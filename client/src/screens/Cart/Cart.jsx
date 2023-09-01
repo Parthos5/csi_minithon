@@ -3,6 +3,7 @@ import './Cart.css'
 import db_items from "../Category/db/data"
 import Navbar from "../../components/Navbar/Navbar";
 import { FaShoppingCart } from "react-icons/fa";
+import {Link} from "react-router-dom"
 function Header({ itemCount }) {
   // let products = [];
   //   if(localStorage.getItem("cart")){
@@ -258,7 +259,9 @@ export default function ShoppingCartApp() {
       ) : (
         <div className="empty-product">
           <h3>There are no products in your cart.</h3>
+          <Link className="menu-link" to="/category">
           <button onClick={() => setProducts(PRODUCTS)}>Shopping now</button>
+          </Link>
         </div>
       )}
     </div>
