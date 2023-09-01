@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './UserProfile.css';
 import VerticalTabs from '../../components/VerticalTabPanel/TabPanel';
 import Navbar from '../../components/Navbar/Navbar';
@@ -8,13 +8,22 @@ const UserProfile = () => {
   //create user as json object
   const [data, setData] = useState({
     _id: "user123",
-    username: "John Doe",
+    name: "John Doe",
     img: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
     phone: "123-456-7890",
     email: "john@example.com",
-    city: "Sample City",
-    country: "Sample Country",
+    city: "Thane",
+    country: "India",
   })
+
+  useEffect(() => {
+    const userDataFromLocalStorage = localStorage.getItem('user');
+
+    if (userDataFromLocalStorage) {
+      const parsedData = JSON.parse(userDataFromLocalStorage);
+      setData(parsedData);
+    }
+  }, []);
 
   return (
     <>
