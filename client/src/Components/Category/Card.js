@@ -1,7 +1,7 @@
 import { BsFillBagFill } from "react-icons/bs";
 import { FaHeart, FaRegHeart, FaShoppingCart } from "react-icons/fa";
 import { useState,useEffect } from "react";
-
+import { Link } from "react-router-dom";
 
 const Card = ({ img, title, star, reviews, prevPrice, newPrice }) => {
   const [wishItems,setwishItems] = useState([]);
@@ -41,6 +41,7 @@ const Card = ({ img, title, star, reviews, prevPrice, newPrice }) => {
   }, [wishItems]);
   return (
     <>
+    <Link to={`/productDetails?title=${title}`}>
       <section className="card">
         <img src={img} alt={title} className="card-img" />
         <div className="card-details">
@@ -62,6 +63,7 @@ const Card = ({ img, title, star, reviews, prevPrice, newPrice }) => {
           </section>
         </div>
       </section>
+      </Link>
     </>
   );
 };

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./ProductDetails.css";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
+import { useParams } from 'react-router-dom';
+import db_items from "../Category/db/data"
 
 const ProductDetails = () => {
   const [imgId, setImgId] = useState(1);
@@ -10,6 +12,11 @@ const ProductDetails = () => {
     event.preventDefault();
     setImgId(id);
   };
+  const { title } = useParams();
+  console.log(db_items)
+  // const itemInDatabase = db_items.find((item) => title === item.title);
+  const itemInDatabase = db_items.find((item) => title === db_items.title )
+  console.log(itemInDatabase);
 
   useEffect(() => {
     const displayWidth = document.querySelector(
@@ -22,7 +29,7 @@ const ProductDetails = () => {
   const ProdcutDetailArr = [
     {
       id: 1,
-      pname: "Vuebot",
+      pname: itemInDatabase.title,
       pdesc:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo eveniet veniam tempora fuga tenetur placeat sapiente architecto illum soluta consequuntur, aspernatur quidem at sequi ipsa! Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, perferendis eius. Dignissimos, labore suscipit. Unde.",
       powner: "Ram Shinde",
@@ -34,7 +41,7 @@ const ProductDetails = () => {
   const imgBtns = [
     {
       id: 1,
-      src: "https://cdn.analyticsvidhya.com/wp-content/uploads/2023/04/ai-generated-gba2dce9e3_1920_xMPNobD.jpg",
+      src: itemInDatabase.img,
       alt: "shoe image",
     },
   ];
@@ -131,7 +138,7 @@ const ProductDetails = () => {
 
                   <ul>
                     <li>
-                      Cost: $150
+                      Cost: {itemInDatabase.newPrice}
                     </li>
                     <li>
                       Delivery In Next 6 days!

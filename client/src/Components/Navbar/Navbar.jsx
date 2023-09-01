@@ -100,12 +100,12 @@ const Navbar = () => {
                 </div>
               </li>
               <li className="menu-item menu-mob">
-                <Link className="menu-link" to="/">
+                <Link className="menu-link" to="/userProfile">
                   Account
                 </Link>
               </li>
               <li className="menu-item menu-mob">
-                <Link className="menu-link" to="/register">
+                <Link className="menu-link" to="/Cart">
                   Cart
                 </Link>
               </li>

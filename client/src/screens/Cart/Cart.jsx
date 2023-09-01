@@ -98,7 +98,7 @@ function Header({ itemCount }) {
     const total = subTotal - discount + tax;
   
     return (
-      <section className="container">
+      <section className="container" style={{paddingBottom:"2rem"}}>
         <div className="promotion">
           <label htmlFor="promo-code">Have A Promo Code?</label>
           <input type="text" onChange={onEnterPromoCode} />

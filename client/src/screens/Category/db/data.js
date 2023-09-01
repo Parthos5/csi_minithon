@@ -160,6 +160,39 @@ const data = [
     color: "silver",
     category: "Domestic Robot",
   },
+  {
+    img: "https://compote.slate.com/images/54fd861f-d7ef-41a5-86f2-1be5856a103b.jpeg?crop=7018%2C4679%2Cx0%2Cy0",
+    title: "Delivery Robot",
+    star: <AiFillStar className="rating-star" />,
+    reviews: "(30 reviews)",
+    prevPrice: "Rs. 9000",
+    newPrice: "7999",
+    company: "ServiBot",
+    color: "green",
+    category: "Service Robot",
+  },
+  {
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLSItSbZLdXkTywirI18f3U-Byngo43HF8Jw&usqp=CAU",
+    title: "Customer Service Robot",
+    star: <AiFillStar className="rating-star" />,
+    reviews: "(28 reviews)",
+    prevPrice: "Rs. 9500",
+    newPrice: "8499",
+    company: "CustoBot",
+    color: "blue",
+    category: "Service Robot",
+  },
+  {
+    img: "https://duve.com/wp-content/uploads/2022/09/Smart-Robot-Assistant-On-Futuristic-Hotel-Room.jpg",
+    title: "Hotel Assistant Robot",
+    star: <AiFillStar className="rating-star" />,
+    reviews: "(20 reviews)",
+    prevPrice: "Rs. 8500",
+    newPrice: "7499",
+    company: "HotelTech",
+    color: "white",
+    category: "Service Robot",
+  }
   // Add more products as needed...
 ];
 
