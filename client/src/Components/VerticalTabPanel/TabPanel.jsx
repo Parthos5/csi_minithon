@@ -112,7 +112,7 @@ export default function VerticalTabs(props) {
         _id: "order1",
         updatedAt: "2023-08-31",
         amount: 150,
-        customerName: "John Doe",
+        customerName: "Hamza Sayyed",
         method: 0,
         products: [
           { productId: "product1", name: "Product 1", description: "Description 1", price: 50, quantity: 2, totalPrice: 100 },
@@ -123,7 +123,7 @@ export default function VerticalTabs(props) {
         _id: "order2",
         updatedAt: "2023-08-31",
         amount: 150,
-        customerName: "John Doe",
+        customerName: "Hamza Sayyed",
         method: 0,
         products: [
           { productId: "product1", name: "Product 1", description: "Description 1", price: 50, quantity: 2, totalPrice: 100 },
@@ -134,7 +134,7 @@ export default function VerticalTabs(props) {
         _id: "order3",
         updatedAt: "2023-08-31",
         amount: 150,
-        customerName: "John Doe",
+        customerName: "Hamza Sayyed",
         method: 0,
         products: [
           { productId: "product1", name: "Product 1", description: "Description 1", price: 50, quantity: 2, totalPrice: 100 },
@@ -181,7 +181,7 @@ export default function VerticalTabs(props) {
           <div className="UserInfo">
             <img src={user.img || "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"} alt="" />
             <div>
-              <h3>{user.username}</h3>
+              <h3>{user.name}</h3>
             </div>
 
             <div>
@@ -220,7 +220,7 @@ export default function VerticalTabs(props) {
             <img src={user.img || "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"} alt="" />
             <div className='Profile'>
               <h3>Name</h3>
-              <span>{user.username}</span>
+              <span>{user.name}</span>
             </div>
             <div className='Profile'>
               <h3>Mobile No</h3>

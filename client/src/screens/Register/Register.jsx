@@ -12,6 +12,9 @@ const Register = () => {
     email: "",
     password: "",
     pincode: "",
+    phone: "1234567890",
+    city: "Thane",
+    country: "India",
   });
 
   const checkPasswordStrength = (password) => {
@@ -158,7 +161,7 @@ const Register = () => {
                     <label for="RememberMe">Remember me</label>
                   </div>
                 </div>
-                <button className="LoginButton" onClick={handleSubmit}>Register</button>
+                <button className="LoginButton" onClick={handleSubmit}><a href="./Category" style={{ color: "#fff" }}>Register</a></button>
                 <div className="HaveAnAcc">
                   <span>
                     {" "}
