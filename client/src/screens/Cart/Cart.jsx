@@ -1,16 +1,13 @@
 import React from "react"
 import './Cart.css'
 
-
+import Navbar from "../../components/Navbar/Navbar";
 function Header({ itemCount }) {
     return (
       <header className="container">
         <h1>Shopping Cart</h1>
   
-        <ul className="breadcrumb">
-          <li>Home</li>
-          <li>Shopping Cart</li>
-        </ul>
+        
   
         <span className="count">{itemCount} items in the bag</span>
       </header>
@@ -19,7 +16,9 @@ function Header({ itemCount }) {
   
   function ProductList({ products, onChangeProductQuantity, onRemoveProduct }) {
     return (
-      <section className="container">
+      
+
+      <section className="containers">
         <ul className="products">
           {products.map((product, index) => {
             return (
@@ -117,15 +116,22 @@ function Header({ itemCount }) {
   
   const PRODUCTS = [
     {
-      image: "https://c.static-nike.com/a/images/f_auto,b_rgb:f5f5f5,w_880/acmoik7t1kfbprm8hsqs/vaporfly-4-flyknit-running-shoe-7R7zSn.jpg",
+      image: "https://cdn.analyticsvidhya.com/wp-content/uploads/2023/04/ai-generated-gba2dce9e3_1920_xMPNobD.jpg",
       name: "PRODUCT ITEM NUMBER 1",
       description: "Description for product item number 1",
       price: 5.99,
       quantity: 2
     },
     {
-      image: "https://c.static-nike.com/a/images/f_auto,b_rgb:f5f5f5,w_880/acmoik7t1kfbprm8hsqs/vaporfly-4-flyknit-running-shoe-7R7zSn.jpg",
+      image: "https://cdn.analyticsvidhya.com/wp-content/uploads/2023/04/ai-generated-gba2dce9e3_1920_xMPNobD.jpg",
       name: "PRODUCT ITEM NUMBER 2",
+      description: "Description for product item number 1",
+      price: 9.99,
+      quantity: 1
+    },
+    {
+      image: "https://cdn.analyticsvidhya.com/wp-content/uploads/2023/04/ai-generated-gba2dce9e3_1920_xMPNobD.jpg",
+      name: "PRODUCT ITEM NUMBER 3",
       description: "Description for product item number 1",
       price: 9.99,
       quantity: 1
@@ -202,6 +208,7 @@ function Header({ itemCount }) {
   
     return (
       <div>
+      <Navbar/>
         <Header itemCount={itemCount} />
   
         {products.length > 0 ? (

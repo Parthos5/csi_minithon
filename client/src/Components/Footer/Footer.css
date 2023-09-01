@@ -1,10 +1,10 @@
 .pg-footer {
   position: relative;
   font-family: "Roboto", sans-serif;
-  margin-top: 8vh;
+  /* margin-top: 8vh; */
 }
 
-.footer {
+.footers {
   background-color: rgb(18 19 65);
   color: #fff;
 }
@@ -17,7 +17,7 @@
   width: 100%;
 }
 .footer-wave-path {
-  fill: #fffff2;
+  fill: #ffffff;
 }
 
 .footer-content {
@@ -229,7 +229,7 @@
 }
 .scroll_wrap {
   position: absolute;
-  top: 0;
+  top: -25px;
   right: 5vw;
   text-align: right;
   cursor: pointer;

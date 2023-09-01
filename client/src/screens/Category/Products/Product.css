@@ -1,8 +1,11 @@
 .card-container {
+  background-color: #01101f;
   display: flex;
   flex-wrap: wrap;
-  margin-left: 15rem;
-  margin-top: 2rem;
+  margin-left: 14rem;
+  padding-top: 1rem;
+  padding-left: 2rem;
+  /* margin-top: 2rem; */
   z-index: -2;
 }
 

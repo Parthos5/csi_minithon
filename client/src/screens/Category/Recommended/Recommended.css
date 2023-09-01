@@ -1,12 +1,27 @@
 .recommended-flex {
   display: flex;
-  margin-left: 17rem;
+  padding-left: 17rem;
+  /* column-gap: 1rem; */
+  background-color: #000;
+  color: #fff;
+}
+.btns{
+  padding: 10px;
+  border: none;
+  /* border-radius:10px; */
+  background-color: #0052A2;
+}
+.btns:hover{
+  background-color: #000;
+  color: #919191;
 }
 
 .recommended-title {
-  margin-left: 17rem;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  background-color: #000;
+  color: #fff;
+  padding-left: 17rem;
+  padding-bottom: 20px;
+  padding-top: 20px;
   font-size: 20px;
 }
 @media (max-width: 835px) {

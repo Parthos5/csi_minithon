@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./ProductDetails.css";
-import Navbar from "../../Components/Navbar/Navbar";
-import Footer from "../../Components/Footer/Footer";
+import Navbar from "../../components/Navbar/Navbar";
+import Footer from "../../components/Footer/Footer";
 
 const ProductDetails = () => {
   const [imgId, setImgId] = useState(1);
@@ -22,7 +22,7 @@ const ProductDetails = () => {
   const ProdcutDetailArr = [
     {
       id: 1,
-      pname: "Sofa",
+      pname: "Vuebot",
       pdesc:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo eveniet veniam tempora fuga tenetur placeat sapiente architecto illum soluta consequuntur, aspernatur quidem at sequi ipsa! Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, perferendis eius. Dignissimos, labore suscipit. Unde.",
       powner: "Ram Shinde",
@@ -34,7 +34,7 @@ const ProductDetails = () => {
   const imgBtns = [
     {
       id: 1,
-      src: "https://images.unsplash.com/photo-1540574163026-643ea20ade25?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c29mYXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80",
+      src: "https://cdn.analyticsvidhya.com/wp-content/uploads/2023/04/ai-generated-gba2dce9e3_1920_xMPNobD.jpg",
       alt: "shoe image",
     },
   ];
@@ -54,19 +54,61 @@ const ProductDetails = () => {
                   ))}
                 </div>
               </div>
-              <div className="img-select">
-                {imgBtns.map((imgItem) => (
-                  <div className="img-item" key={imgItem.id}>
-                    <a
-                      href="#"
-                      data-id={imgItem.id}
-                      onClick={(event) => handleImageClick(event, imgItem.id)}
-                    >
-                      <img src={imgItem.src} alt={imgItem.alt} />
-                    </a>
-                  </div>
-                ))}
+              <div className="subimages">
+                <div className="img-select">
+                  {imgBtns.map((imgItem) => (
+                    <div className="img-item" key={imgItem.id}>
+                      <a
+                        href="#"
+                        data-id={imgItem.id}
+                        onClick={(event) => handleImageClick(event, imgItem.id)}
+                      >
+                        <img src={imgItem.src} alt={imgItem.alt} />
+                      </a>
+                    </div>
+                  ))}
+                </div>
+                <div className="img-select">
+                  {imgBtns.map((imgItem) => (
+                    <div className="img-item" key={imgItem.id}>
+                      <a
+                        href="#"
+                        data-id={imgItem.id}
+                        onClick={(event) => handleImageClick(event, imgItem.id)}
+                      >
+                        <img src={imgItem.src} alt={imgItem.alt} />
+                      </a>
+                    </div>
+                  ))}
+                </div>
+                <div className="img-select">
+                  {imgBtns.map((imgItem) => (
+                    <div className="img-item" key={imgItem.id}>
+                      <a
+                        href="#"
+                        data-id={imgItem.id}
+                        onClick={(event) => handleImageClick(event, imgItem.id)}
+                      >
+                        <img src={imgItem.src} alt={imgItem.alt} />
+                      </a>
+                    </div>
+                  ))}
+                </div>
+                <div className="img-select">
+                  {imgBtns.map((imgItem) => (
+                    <div className="img-item" key={imgItem.id}>
+                      <a
+                        href="#"
+                        data-id={imgItem.id}
+                        onClick={(event) => handleImageClick(event, imgItem.id)}
+                      >
+                        <img src={imgItem.src} alt={imgItem.alt} />
+                      </a>
+                    </div>
+                  ))}
+                </div>
               </div>
+              
             </div>
 
             {ProdcutDetailArr.map((pItem) => (
@@ -80,13 +122,10 @@ const ProductDetails = () => {
 
                   <ul>
                     <li>
-                      Owner: <span>{pItem.powner}</span>
+                      Cost: $150
                     </li>
                     <li>
-                      Required: <span>{pItem.requiredment}</span>
-                    </li>
-                    <li>
-                      Date Of Purchase: <span>{pItem.dateOfPurchase}</span>
+                      Delivery In Next 6 days!
                     </li>
                   </ul>
                 </div>

@@ -13,24 +13,24 @@ const Footer = () => {
   return (
     <>
       <div className="pg-footer">
-        <footer className="footer">
+        <footer className="footers">
           <svg
             className="footer-wave-svg"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 1200 100"
             preserveAspectRatio="none"
           >
-            <path
+            {/* <path
               className="footer-wave-path"
               d="M851.8,100c125,0,288.3-45,348.2-64V0H0v44c3.7-1,7.3-1.9,11-2.9C80.7,22,151.7,10.8,223.5,6.3C276.7,2.9,330,4,383,9.8 c52.2,5.7,103.3,16.2,153.4,32.8C623.9,71.3,726.8,100,851.8,100z"
-            ></path>
+            ></path> */}
           </svg>
           <div className="footer-content">
             <div className="footer-content-column">
               <div className="footer-logo">
                 <Link className="footer-logo-link">
-                  <span className="hidden-link-text">BarterX</span>
-                  <h1>BarterX</h1>
+                  <span className="hidden-link-text">TECHKITS</span>
+                  <h1>TECHKITS</h1>
                 </Link>
               </div>
               <div className="footer-menu">
@@ -43,7 +43,7 @@ const Footer = () => {
                     <Link to="/">Who It's For</Link>
                   </li>
                   <li className="menu-item menu-item-type-post_type menu-item-object-product">
-                    <Link to="/">Where We Barter</Link>
+                    <Link to="/">Where We trade</Link>
                   </li>
                   <li className="menu-item menu-item-type-post_type menu-item-object-product">
                     <Link to="/">How It Works</Link>
@@ -225,7 +225,7 @@ const Footer = () => {
               <p className="footer-copyright-text">
                 <Link className="footer-copyright-link" to="/" target="_self">
                   {" "}
-                  ©2023. | All rights reserved. | BarterX
+                  ©2023. | All rights reserved. | TechKits
                 </Link>
               </p>
             </div>

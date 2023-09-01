@@ -7,12 +7,44 @@ import { FaLinkedinIn, FaHeart, FaGrinTongueWink } from "https://cdn.skypack.dev
 import './Home.css';
 // import Navbar from '../../components/Navbar/Navbar';
 const Home = () => {
+    document.addEventListener('DOMContentLoaded', function() {
+    var counters = document.querySelectorAll('.count-number');
+    var windowHeight = window.innerHeight;
+
+    function animateCounters() {
+        counters.forEach(function(counter) {
+            var counterPosition = counter.getBoundingClientRect().top;
+
+            if (counterPosition - windowHeight <= 0) {
+                var targetValue = parseInt(counter.textContent, 10);
+                var currentValue = 0;
+                var delay = 10;
+                var increment = targetValue / (1000 / delay);
+
+                var interval = setInterval(function() {
+                    currentValue += increment;
+                    counter.textContent = Math.floor(currentValue);
+
+                    if (currentValue >= targetValue) {
+                        clearInterval(interval);
+                        counter.textContent = targetValue;
+                    }
+                }, delay);
+            }
+        });
+    }
+    window.addEventListener('scroll', animateCounters);
+    animateCounters();
+
+    
+});
+
   return (
     <div>
       {/* <Navbar/> */}
-      <div>
+      <div className='body'>
       <section className="one">
-        <nav>
+        <nav className="nav">
           <ul className="d-flex navbar-link">
             <li>About</li>
             {/* <li className="logo">
@@ -58,9 +90,9 @@ const Home = () => {
               <span>
               <FaLinkedinIn className="fab" />
             </span>
-            <span>
+            {/* <span>
               <SiBehance className="fab" />
-            </span>
+            </span> */}
           </div>
         </div>
 
@@ -71,16 +103,16 @@ const Home = () => {
           Get Started
         </span>
 
-        <div className="featured">FEATURED</div>
+        {/* <div className="featured">FEATURED</div> */}
       </section>
 
       <div className="heading">
                 <h2>FEATURED PRODUCTS</h2>
-                <div className="line"></div>
+                <div className="underline"></div>
             </div>
       <section className="two">
-        <img
-          src={
+     <img
+         src={
             "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/287eab66-0f73-4b97-8e74-849c5f06d542/denm9yd-106dade8-9cf8-4bf8-858d-916385ea39d7.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzI4N2VhYjY2LTBmNzMtNGI5Ny04ZTc0LTg0OWM1ZjA2ZDU0MlwvZGVubTl5ZC0xMDZkYWRlOC05Y2Y4LTRiZjgtODU4ZC05MTYzODVlYTM5ZDcuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.rQzwFnBfPXDUmn3GRCWr-1JJjgd6DNfYXIYnlJ5TSx4"
           }
           alt=""
@@ -126,10 +158,71 @@ const Home = () => {
             "https://img.freepik.com/premium-photo/illustration-cyber-tokyo-neon-street-rainy-nigh-3d-rendering-raster-illustration_717906-764.jpg?w=2000"
           }
           alt=""
-        />
+        /> 
+        {/* <div class="wrapper">
+            <div class="container">
+                <div class="top"></div>
+                <div class="bottom">
+                <div class="left">
+                    <div class="details">
+                    <h1>Chair</h1>
+                    <p>£250</p>
+                    </div>
+                    <div class="buy"><i class="material-icons">add_shopping_cart</i></div>
+                </div>
+                <div class="right">
+                    <div class="done"><i class="material-icons">done</i></div>
+                    <div class="details">
+                    <h1>Chair</h1>
+                    <p>Added to your cart</p>
+                    </div>
+                    <div class="remove"><i class="material-icons">clear</i></div>
+                </div>
+                </div>
+            </div>
+            <div class="inside">
+                <div class="icon"><i class="material-icons">info_outline</i></div>
+                <div class="contents">
+                <table>
+                    <tr>
+                    <th>Width</th>
+                    <th>Height</th>
+                    </tr>
+                    <tr>
+                    <td>3000mm</td>
+                    <td>4000mm</td>
+                    </tr>
+                    <tr>
+                    <th>Something</th>
+                    <th>Something</th>
+                    </tr>
+                    <tr>
+                    <td>200mm</td>
+                    <td>200mm</td>
+                    </tr>
+                    <tr>
+                    <th>Something</th>
+                    <th>Something</th>
+                    </tr>
+                    <tr>
+                    <td>200mm</td>
+                    <td>200mm</td>
+                    </tr>
+                    <tr>
+                    <th>Something</th>
+                    <th>Something</th>
+                    </tr>
+                    <tr>
+                    <td>200mm</td>
+                    <td>200mm</td>
+                    </tr>
+                </table>
+                </div>
+            </div>
+        </div> */}
       </section>
 
-      <section className="three">
+      {/* <section className="three">
         <span>login</span>
         <svg viewBox="0 0 150 150">
           <path
@@ -143,7 +236,7 @@ const Home = () => {
             </textPath>
           </text>
         </svg>
-      </section>
+      </section> */}
 
       <section className="four">
         <div className="Patners"></div>
@@ -180,7 +273,7 @@ const Home = () => {
 
       <section className="five">
         <div className="five-content">
-          <span className="circle-b">N</span>
+          <span className="circle-b">TK</span>
           <div className="Why"></div>
         </div>
         <p className="five-p">
@@ -219,7 +312,7 @@ const Home = () => {
         <img src={"barcode"} alt="" className="barcode" />
         <div className="about"></div>
 
-        <div className="grid-3">
+        {/* <div className="grid-3">
           <div className="bnumber">8</div>
           <div className="bnumber">100+</div>
           <div className="bnumber">1,000+</div>
@@ -232,7 +325,46 @@ const Home = () => {
           <div className="mtext">
             Weekly <br /> Posts
           </div>
+        </div> */}
+<section id="statistic" class="statistic-section one-page-section">
+        <div class="containercounter">
+            <div class="rowcounter text-center">
+                <div class="col-xs-12 col-md-3">
+                    <div class="counter">
+                        <i class="fa fa-coffee fa-2x stats-icon"></i>
+                        <h2 class="timer count-title count-number">7,000+</h2>
+                        <div class="stats-line-black"></div>
+                        <p class="stats-text">Products</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-3">
+                    <div class="counter">
+                        <i class="fa fa-code fa-2x stats-icon"></i>
+                        <h2 class="timer count-title count-number">18,000+
+                        </h2>
+                        <div class="stats-line-black"></div>
+                        <p class="stats-text">Transactions</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-3">
+                    <div class="counter">
+                        <i class="fa fa-clock-o fa-2x stats-icon"></i>
+                        <h2 class="timer count-title count-number">250+</h2>
+                        <div class="stats-line-black"></div>
+                        <p class="stats-text">Categories</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-3">
+                    <div class="counter">
+                        <i class="fa fa-laptop fa-2x stats-icon"></i>
+                        <h2 class="timer count-title count-number">25,000</h2>
+                        <div class="stats-line-black"></div>
+                        <p class="stats-text">Customers</p>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
         <p className="six-p">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur
@@ -261,8 +393,8 @@ const Home = () => {
         <div className="linear-gradient"></div>
 
         <div className="quote">
-          <div>"The best thing to hold</div>
-          <div>onto in life is each other"</div>
+          <div>"Empowering Your Robotic Dreams,</div>
+          <div> One Innovation at a Time"</div>
         </div>
       </section>
 
@@ -270,9 +402,10 @@ const Home = () => {
         <div className="footer-content">
           <ul className="d-flex navbar-link">
             <li className="logo">
-              <span className="circle-border">N</span> <span>WINKLE MEDIA</span>
+              <span className="circle-border">TK</span> <span>TECHKITS</span>
             </li>
-            <li>Services</li>
+            <li>Categories</li>
+            <li>About</li>
             <li>Get started</li>
           </ul>
           <div className="footer-icon">
@@ -281,10 +414,10 @@ const Home = () => {
             <span></span>
           </div>
           <ul className="footer-link">
-            <li className="footer-title">located</li>
-            <li className="footer-text">NewYork, USA</li>
+            <li className="footer-title">HeadQuarters</li>
+            <li className="footer-text">Delhi, INDIA</li>
             <li className="footer-title">Phone no:</li>
-            <li className="footer-text">+977 9812345678</li>
+            <li className="footer-text">+91 998795231</li>
             <li className="footer-title">Mail:</li>
             <li className="footer-text">nischalchan@gmail.com</li>
           </ul>

@@ -1,4 +1,4 @@
-import Input from "../../../../Components/Category/Input";
+import Input from "../../../../components/Category/Input";
 import "./Price.css";
 
 const Price = ({ handleChange }) => {
@@ -15,28 +15,28 @@ const Price = ({ handleChange }) => {
         <Input
           handleChange={handleChange}
           value={50}
-          title="Rs. 0 - 500"
+          title="Rs. 0 - 5000"
           name="test2"
         />
 
         <Input
           handleChange={handleChange}
           value={100}
-          title="Rs. 500 - 1000"
+          title="Rs. 5000 - 50000"
           name="test2"
         />
 
         <Input
           handleChange={handleChange}
           value={150}
-          title="Rs. 1000 - 2000"
+          title="Rs. 50000 - 100000"
           name="test2"
         />
 
         <Input
           handleChange={handleChange}
           value={200}
-          title="Over Rs. 2000"
+          title="Over Rs. 100000+"
           name="test2"
         />
       </div>

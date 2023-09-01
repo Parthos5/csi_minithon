@@ -1,10 +1,10 @@
-import Button from "../../../Components/Category/Button";
+import Button from "../../../components/Category/Button";
 import "./Recommended.css";
 
 const Recommended = ({ handleClick }) => {
   return (
     <>
-      <div>
+      <div >
         <h2 className="recommended-title">Recommended</h2>
         <div className="recommended-flex">
           <Button onClickHandler={handleClick} value="" title="All Products" />

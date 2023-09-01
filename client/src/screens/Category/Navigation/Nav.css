@@ -1,11 +1,16 @@
 .categNav {
+  background-color: #000;
   display: flex;
-  border-bottom: 2px solid #f3f3f3;
+  border-bottom: 2px solid #032d55;
   justify-content: space-around;
   align-items: center;
   padding: 20px;
   z-index: 999;
   margin-left: 2rem;
+}
+.nav-container{
+  padding-left: 70px;
+  width: 700px;
 }
 
 .search-input {
@@ -16,7 +21,7 @@
   margin-right: 20px;
   border-radius: 5px;
   position: relative;
-  width: 14rem;
+  /* width: 14rem; */
 }
 
 .nav-icons {
@@ -34,4 +39,15 @@
   font-size: 1.9rem;
   color: #bdbdbd;
   margin-left: 1rem;
+}
+.profile-container i:hover{
+  color: #25539e;
+}
+
+.nav-icons{
+  font-size:1rem;
+}
+.nav-icons:hover{
+  
+  color: #25539e;
 }

@@ -1,6 +1,6 @@
 import { BsFillBagFill } from "react-icons/bs";
 
-const Card = ({ img, title, star, reviews, prevPrice, newPrice }) => {
+export default function Card({ img, title, star, reviews, prevPrice, newPrice }){
   return (
     <>
       <section className="card">
@@ -25,4 +25,4 @@ const Card = ({ img, title, star, reviews, prevPrice, newPrice }) => {
   );
 };
 
-export default Card;
+
