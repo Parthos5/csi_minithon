@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import './UserProfile.css';
-import VerticalTabs from '../../Components/VerticalTabPanel/TabPanel';
-import Navbar from '../../Components/Navbar/Navbar';
-import Footer from '../../Components/Footer/Footer';
+import VerticalTabs from '../../components/VerticalTabPanel/TabPanel';
+import Navbar from '../../components/Navbar/Navbar';
+import Footer from '../../components/Footer/Footer';
 
 const UserProfile = () => {
   //create user as json object

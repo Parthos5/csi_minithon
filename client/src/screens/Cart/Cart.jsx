@@ -2,6 +2,7 @@ import React from "react"
 import './Cart.css'
 import db_items from "../Category/db/data"
 import Navbar from "../../components/Navbar/Navbar";
+import { FaShoppingCart } from "react-icons/fa";
 function Header({ itemCount }) {
   // let products = [];
   //   if(localStorage.getItem("cart")){
@@ -31,6 +32,10 @@ function Header({ itemCount }) {
       
 
       <section className="containers">
+      <div className="headers">
+        <FaShoppingCart/> 
+        <h1>Shopping Cart</h1>
+      </div>
         <ul className="products">
           {products.map((product, index) => {
             return (

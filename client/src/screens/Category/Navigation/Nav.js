@@ -18,13 +18,13 @@ const Nav = ({ handleInputChange, query }) => {
         />
       </div>
       <div className="profile-container">
-        <Link to="/">
+        <Link to="/Wishlist">
           <i><FaRegHeart /></i>
         </Link>
-        <Link to="/">
-          <i><FaShoppingCart /></i>
+        <Link to="/Cart">
+          <a href="/Cart"><i><FaShoppingCart /></i></a>
         </Link>
-        <Link to="">
+        <Link to="/UserProfile">
           <AiOutlineUserAdd className="nav-icons" />
           {/* <AccountMenu /> */}
         </Link>

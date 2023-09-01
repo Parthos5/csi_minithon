@@ -39,6 +39,8 @@ const Home = () => {
     
 });
 
+localStorage.setItem("wishlist", JSON.stringify(["Nike Air Monarch IV"]));
+localStorage.setItem("cart", JSON.stringify(["Nike Air Monarch IV"]));
   return (
     <div>
       {/* <Navbar/> */}
@@ -46,16 +48,16 @@ const Home = () => {
       <section className="one">
         <nav className="nav">
           <ul className="d-flex navbar-link">
-            <li>About</li>
+            <li><a href="/" style={{color:"#fff"}}>About</a></li>
             {/* <li className="logo">
               <span className="circle-border">N</span>{" "}
               <span>WINKLE'S MEDIA</span>
             </li> */}
-            <li>Categories</li>
-            <li>Sign Up</li>
+            <li><a href="/Category" style={{color:"#fff"}}>Categories</a></li>
+            <li><a href="/Login" style={{color:"#fff"}}>Sign Up</a></li>
             <li className='LoginKaro'>
                 <section className="three">
-                    <span>login</span>
+                    <span><a href="/Login" style={{color:"#fff"}}>login</a></span>
                     <svg viewBox="0 0 150 150">
                     <path
                         id="curve"
@@ -292,7 +294,7 @@ const Home = () => {
 
         <p className="five-p">Check out our services.</p>
 
-        <img
+        {/* <img
           src={
             "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/04c4f5c9-ae48-4851-be46-4ed111ce5bc0/dfepyec-02f73cac-f577-43bb-9901-fd6b341395c0.jpg/v1/fill/w_900,h_1350,q_75,strp/neonpunk_cat_with_glasses_by_lozfunk_dfepyec-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTM1MCIsInBhdGgiOiJcL2ZcLzA0YzRmNWM5LWFlNDgtNDg1MS1iZTQ2LTRlZDExMWNlNWJjMFwvZGZlcHllYy0wMmY3M2NhYy1mNTc3LTQzYmItOTkwMS1mZDZiMzQxMzk1YzAuanBnIiwid2lkdGgiOiI8PTkwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.PwdEk6Xvt3xvPlq46FEw78F8o73NdEYeYLgAvuZ1cVg"
           }
@@ -305,7 +307,7 @@ const Home = () => {
           }
           className="bigimg-right"
           alt=""
-        />
+        /> */}
       </section>
 
       <section className="six">

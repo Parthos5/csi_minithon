@@ -100,7 +100,7 @@ const Login = () => {
                     Forgot Password?
                   </a>
                 </div>
-                <button className="LoginButton" onClick={handleSubmit}>Login</button>
+                <button className="LoginButton" onClick={handleSubmit}> <a href="./Category" style={{color:"#fff"}}>Login</a></button>
                 <div className="HaveAnAcc">
                   <span>
                     {" "}

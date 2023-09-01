@@ -13,37 +13,37 @@ function Category({ handleChange }) {
         </label>
         <Input
           handleChange={handleChange}
-          value="sneakers"
-          title="Industrial robots"
+          value="Industrial Robot"
+          title="Industrial Robot"
           name="test"
         />
         <Input
           handleChange={handleChange}
-          value="flats"
-          title="Domestic robots"
+          value="Domestic Robot"
+          title="Domestic Robot"
           name="test"
         />
         <Input
           handleChange={handleChange}
-          value="sandals"
-          title="Service robots"
+          value="Service Robot"
+          title="Service Robot"
           name="test"
         />
         <Input
           handleChange={handleChange}
-          value="heels"
-          title="Educational robots"
+          value="Educational Robot"
+          title="Educational Robot"
           name="test"
         />
         <Input
           handleChange={handleChange}
-          value="T-shirt"
-          title="Medical robots"
+          value="Medical Robot"
+          title="Medical Robot"
           name="test"
         />
         <Input
           handleChange={handleChange}
-          value="T-shirt"
+          value="Sensors & Detectors"
           title="Sensors & Detectors"
           name="test"
         />

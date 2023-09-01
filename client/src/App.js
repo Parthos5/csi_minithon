@@ -11,7 +11,7 @@ import ProductDetails from "./screens/ProductDetails/ProductDetails"
 import Category from "./screens/Category/Category";
 import Cart from "./screens/Cart/Cart";
 import Wishlist from "./screens/Wishlist/Wishlist"
-import Home from './screens/HomePage/Home';
+
 import UserProfile from './screens/UserProfile/UserProfile';
 // import Home from "./screens/HomePage/Home"
 
@@ -20,20 +20,14 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-          <Route exact path="/" element={<landingPg />} />
-          <Route exact path="/Home" element={<Home />} />
           <Route exact path="/" element={<Home />} />
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/register" element={<Register />} />
-          {/* <Route exact path="/" element={<landingPg />} /> */}
-          <Route exact path="/Category" element={<Category />} />
           <Route exact path="/ProductDetails" element={<ProductDetails />} />
           <Route exact path="/Category" element={<Category />} />
-          {/* <Route exact path="/ProductDetails" element={<ProductDetails />} /> */}
           <Route exact path="/Cart" element={<Cart />} />
           <Route exact path="/UserProfile" element={<UserProfile />} />
           <Route exact path="/Wishlist" element={<Wishlist />} />
-          {/* <Route exact path="/" element={<Home />} /> */}
         </Routes>
       </div>
     </Router>
