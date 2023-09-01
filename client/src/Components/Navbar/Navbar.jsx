@@ -52,7 +52,7 @@ const Navbar = () => {
       <header className={`header ${showBoxShadow ? "sticky" : ""}`} id="header">
         <nav className="navbar NavContainer">
           <Link to="/" className="brand">
-            <img src={brandlogo} alt=""  />
+            <img src={brandlogo} alt="" />
             <h1>TECHKITS</h1>
           </Link>
           <div className="burger" id="burger">
