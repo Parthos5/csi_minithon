@@ -1,8 +1,20 @@
 import React from "react"
 import './Cart.css'
-
+import db_items from "../Category/db/data"
 
 function Header({ itemCount }) {
+  // let products = [];
+  //   if(localStorage.getItem("cart")){
+  //       let products_ls = JSON.parse(localStorage.getItem("cart"));
+  //       // console.log(products_ls)
+  //       products_ls.forEach((itemName) =>{
+  //           const itemInDatabase = db_items.find((item) => item.title === itemName);
+  //           if (itemInDatabase) {
+  //             products.push(itemInDatabase);
+  //           }
+  //         });
+  //         console.log(products)
+  //   }
     return (
       <header className="container">
         <h1>Shopping Cart</h1>
@@ -12,7 +24,7 @@ function Header({ itemCount }) {
           <li>Shopping Cart</li>
         </ul>
   
-        <span className="count">{itemCount} items in the bag</span>
+        <span className="count">{PRODUCTS.length} items in the bag</span>
       </header>
     );
   }
@@ -27,15 +39,15 @@ function Header({ itemCount }) {
                 <div className="col left">
                   <div className="thumbnail">
                     <a href="#">
-                      <img src={product.image} style={{height:"250px"}} class="product_img" alt={product.name} />
+                      <img src={product.img} style={{height:"250px"}} className="product_img" alt={product.title} />
                     </a>
                   </div>
                   <div className="detail">
                     <div className="name">
-                      <a href="#">{product.name}</a>
+                      <a href="#">{product.title}</a>
                     </div>
                     <div className="description">{product.description}</div>
-                    <div className="price">{formatCurrency(product.price)}</div>
+                    <div className="price">{formatCurrency(product.newPrice)}</div>
                   </div>
                 </div>
   
@@ -92,7 +104,7 @@ function Header({ itemCount }) {
         <div className="summary">
           <ul>
             <li>
-              Subtotal <span>{formatCurrency(subTotal)}</span>
+              Subtotal <span>{total}</span>
             </li>
             {discount > 0 && (
               <li>
@@ -115,22 +127,7 @@ function Header({ itemCount }) {
     );
   }
   
-  const PRODUCTS = [
-    {
-      image: "https://c.static-nike.com/a/images/f_auto,b_rgb:f5f5f5,w_880/acmoik7t1kfbprm8hsqs/vaporfly-4-flyknit-running-shoe-7R7zSn.jpg",
-      name: "PRODUCT ITEM NUMBER 1",
-      description: "Description for product item number 1",
-      price: 5.99,
-      quantity: 2
-    },
-    {
-      image: "https://c.static-nike.com/a/images/f_auto,b_rgb:f5f5f5,w_880/acmoik7t1kfbprm8hsqs/vaporfly-4-flyknit-running-shoe-7R7zSn.jpg",
-      name: "PRODUCT ITEM NUMBER 2",
-      description: "Description for product item number 1",
-      price: 9.99,
-      quantity: 1
-    }
-  ];
+  const PRODUCTS = [];
   const PROMOTIONS = [
     {
       code: "SUMMER",
@@ -148,10 +145,39 @@ function Header({ itemCount }) {
   const TAX = 5;
   
  export default function ShoppingCartApp() {
+  let PRODUCTS = [];
+    if(localStorage.getItem("cart")){
+        let products_ls = JSON.parse(localStorage.getItem("cart"));
+        // console.log(products_ls)
+        products_ls.forEach((itemName) =>{
+            const itemInDatabase = db_items.find((item) => item.title === itemName);
+            if (itemInDatabase) {
+              PRODUCTS.push(itemInDatabase);
+            }
+          });
+          // console.log(products)
+    }
+    let total = 0;
+    for(let i =0;i<PRODUCTS.length;i++){
+      total += PRODUCTS[i].newPrice;
+    }
+    console.log("total is" + total)
     const CLONE_PRODUCTS = JSON.parse(JSON.stringify(PRODUCTS));
     const [products, setProducts] = React.useState(CLONE_PRODUCTS);
     const [promoCode, setPromoCode] = React.useState("");
     const [discountPercent, setDiscountPercent] = React.useState(0);
+    // let products = [];
+    if(localStorage.getItem("cart")){
+        let products_ls = JSON.parse(localStorage.getItem("cart"));
+        // console.log(products_ls)
+        products_ls.forEach((itemName) =>{
+            const itemInDatabase = db_items.find((item) => item.title === itemName);
+            if (itemInDatabase) {
+              products.push(itemInDatabase);
+            }
+          });
+          console.log(products)
+    }
   
     const itemCount = products.reduce((quantity, product) => {
       return quantity + +product.quantity;
@@ -213,7 +239,7 @@ function Header({ itemCount }) {
             />
   
             <Summary
-              subTotal={subTotal}
+              subTotal={total}
               discount={discount}
               tax={TAX}
               onEnterPromoCode={onEnterPromoCode}
