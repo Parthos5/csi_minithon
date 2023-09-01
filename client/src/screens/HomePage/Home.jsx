@@ -10,7 +10,7 @@ const Home = () => {
     document.addEventListener('DOMContentLoaded', function() {
     var counters = document.querySelectorAll('.count-number');
     var windowHeight = window.innerHeight;
-
+// localStorage.setItem("cart",JSON.stringify(["sample"]));
     function animateCounters() {
         counters.forEach(function(counter) {
             var counterPosition = counter.getBoundingClientRect().top;
@@ -66,7 +66,7 @@ localStorage.setItem("cart", JSON.stringify(["Nike Air Monarch IV"]));
                     />
                     <text>
                         <textPath xlinkHref="#curve" fill="#fff">
-                        | VIEW | LIKE | POST |
+                        | INNOVATE | THINK | CONQUER |
                         </textPath>
                     </text>
                     </svg>
@@ -417,11 +417,11 @@ localStorage.setItem("cart", JSON.stringify(["Nike Air Monarch IV"]));
           </div>
           <ul className="footer-link">
             <li className="footer-title">HeadQuarters</li>
-            <li className="footer-text">Delhi, INDIA</li>
+            <li className="footer-text">Mumbai, INDIA</li>
             <li className="footer-title">Phone no:</li>
             <li className="footer-text">+91 998795231</li>
             <li className="footer-title">Mail:</li>
-            <li className="footer-text">nischalchan@gmail.com</li>
+            <li className="footer-text">aztec@gmail.com</li>
           </ul>
         </div>
 
