@@ -52,7 +52,7 @@ const Navbar = () => {
       <header className={`header ${showBoxShadow ? "sticky" : ""}`} id="header">
         <nav className="navbar NavContainer">
           <Link to="/" className="brand">
-            <img src={brandlogo} alt=""  />
+            <img src={brandlogo} alt="" />
             <h1>TECHKITS</h1>
           </Link>
           <div className="burger" id="burger">
@@ -64,7 +64,7 @@ const Navbar = () => {
           <div className={`menu ${isMenuActive ? "is-active" : ""}`} id="menu">
             <ul className="menu-inner">
               <li className="menu-item">
-                <Link className="menu-link" to="/categ">
+                <Link className="menu-link" to="/category">
                   Category
                 </Link>
               </li>
