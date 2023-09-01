@@ -9,17 +9,19 @@ import ProductDetails from "./screens/ProductDetails/ProductDetails"
 import Category from "./screens/Category/Category"
 import Cart from "./screens/Cart/Cart"
 import Wishlist from "./screens/Wishlist/Wishlist"
+// import Home from "./screens/HomePage/Home"
 
-function App() {
+function App(){
   return (
     <Router>
       <div className="App">
         <Routes>
-          <Route exact path="/" element={<landingPg />} />
+          {/* <Route exact path="/" element={<landingPg />} /> */}
           <Route exact path="/Category" element={<Category />} />
           <Route exact path="/ProductDetails" element={<ProductDetails />} />
           <Route exact path="/Cart" element={<Cart />} />
           <Route exact path="/Wishlist" element={<Wishlist />} />
+          {/* <Route exact path="/" element={<Home />} /> */}
         </Routes>
       </div>
     </Router>
