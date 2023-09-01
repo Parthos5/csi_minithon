@@ -64,7 +64,7 @@ const Navbar = () => {
           <div className={`menu ${isMenuActive ? "is-active" : ""}`} id="menu">
             <ul className="menu-inner">
               <li className="menu-item">
-                <Link className="menu-link" to="/categ">
+                <Link className="menu-link" to="/category">
                   Category
                 </Link>
               </li>
