@@ -1,4 +1,3 @@
-import './App.css';
 import {
   BrowserRouter as Router,
   Routes,
@@ -11,9 +10,7 @@ import ProductDetails from "./screens/ProductDetails/ProductDetails"
 import Category from "./screens/Category/Category";
 import Cart from "./screens/Cart/Cart";
 import Wishlist from "./screens/Wishlist/Wishlist"
-
 import UserProfile from './screens/UserProfile/UserProfile';
-// import Home from "./screens/HomePage/Home"
 
 function App() {
   return (
